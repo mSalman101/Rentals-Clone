@@ -1,1 +1,1 @@
-# Airbnb-Clone
+# Rentals-Clone

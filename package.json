@@ -1,7 +1,10 @@
 {
+<<<<<<< HEAD
   "engines": {
     "node": "20.12.1"
   },
+=======
+>>>>>>> e4b9d169e92190710c6dcad13d687851c729232d
   "name": "Rentals",
   "version": "1.0.0",
   "main": "index.js",
