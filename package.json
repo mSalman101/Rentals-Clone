@@ -1,7 +1,4 @@
 {
-  "engines": {
-    "node": "20.12.1"
-  },
   "name": "Rentals",
   "version": "1.0.0",
   "main": "index.js",
