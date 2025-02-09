@@ -7,9 +7,18 @@ const { isLoggedIn } = require("../middleware");
 
 //index route
 router.get("/", async (req, res) => {
-  const allList = await Listing.find({});
-  res.render("listings/index.ejs", { allList });
+  try {
+    const allList = await Listing.find({});
+    res.render("listings/index.ejs", { allList });
+  } catch (error) {
+    console.error("Error fetching listings:", error);
+    res.status(500).send("Server Error");
+  }
 });
+// router.get("/", async (req, res) => {
+//   const allList = await Listing.find({});
+//   res.render("listings/index.ejs", { allList });
+// });
 
 //new route
 router.get("/new", isLoggedIn, (req, res) => {

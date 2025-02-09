@@ -22,7 +22,7 @@ const DB_URL = process.env.DB_URL;
 mongoose
   .connect(DB_URL)
   .then(() => {
-    console.log("mogo connectted");
+    console.log("mongo connectted");
   })
   .catch((err) => {
     console.log(err);
@@ -108,8 +108,11 @@ app.get("/demouser", async (req, res) => {
 
 app.listen(8083, () => {
   console.log(`server running on 8083`);
-  console.log("DB_URL", process.env.DB_URL);
 });
 
 app.use("/listings", listingsRouter);
 app.use("/", userRouter);
+
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
