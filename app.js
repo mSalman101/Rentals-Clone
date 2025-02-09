@@ -113,3 +113,7 @@ app.listen(8083, () => {
 
 app.use("/listings", listingsRouter);
 app.use("/", userRouter);
+app.get("/",(req,res)=>{
+res.redirect("/listings")
+}
+
