@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %> <%=success %>
 <style>
   #filters {
-    margin-left: 115px;
+    margin-left: 115px; /*115*/
     display: flex;
     flex-wrap: wrap;
   }
@@ -104,10 +104,10 @@
     </div>
   </div>
 
-  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1">
     <%for(let listing of allList ){%>
 
-    <div class="card col">
+    <div class="card col fluid">
       <a href="/listings/<%= listing._id%>">
         <img
           src="<%=listing.image.url%>"

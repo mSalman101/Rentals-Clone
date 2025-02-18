@@ -8,10 +8,10 @@ const DB_URL = process.env.DB_URL;
 
 main()
   .then(() => {
-    console.log("connected with db");
+    console.log(`connected with db `);
   })
   .catch((err) => {
-    console.log(err);
+    console.log(`${err} YOYO ${DB_URL}`);
   });
 
 async function main() {

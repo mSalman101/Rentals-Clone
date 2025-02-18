@@ -60,7 +60,7 @@ router.put("/:id", isLoggedIn, async (req, res) => {
   res.redirect(`/listings/${id}`);
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", isLoggedIn, async (req, res) => {
   try {
     let { id } = req.params;
     await Listing.findByIdAndDelete(id);

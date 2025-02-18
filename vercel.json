@@ -5,5 +5,7 @@
     { "src": "/api/(.*)", "dest": "index.js" },
     { "src": "/(.*)", "dest": "index.js" }
   ],
-  "env": { "DATABASE_URL": "@DB_URL" }
+  "env": {
+    "DATABASE_URL": "mongodb+srv://user36:4321@cluster0.iz9qn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+  }
 }
